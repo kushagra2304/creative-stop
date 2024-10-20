@@ -1,0 +1,178 @@
+// Variables for consistent theming
+$primary-color: #3897f0;
+$secondary-color: #0095f6;
+$border-color: #dbdbdb;
+$error-color: #e74c3c;
+$background-color: #fafafa;
+$text-color: #262626;
+$font-family: 'Arial', sans-serif;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-family;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: $background-color;
+  flex-direction: column;
+}
+
+.login-box {
+  background-color: white;
+  border: 1px solid $border-color;
+  padding: 40px;
+  width: 350px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+}
+
+h1 {
+  font-family: 'Billabong', cursive;
+  font-size: 3rem;
+  color: $primary-color;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 40%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  background-color: #fafafa;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: #999;
+}
+
+button {
+  width: 40%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 12px;
+}
+
+.btn {
+  &.login-btn {
+    background-color: $primary-color;
+    color: white;
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+
+  &.signup-btn {
+    background-color: $secondary-color;
+    color: white;
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+  }
+
+  &.anonymous-btn,
+  &.signin-btn {
+    background-color: #f5f5f5;
+    color: $text-color;
+    border: 1px solid $border-color;
+    &:hover {
+      background-color: darken(#f5f5f5, 5%);
+    }
+  }
+
+  &.logout-btn {
+    background-color: #ff4d4d;
+    color: white;
+    &:hover {
+      background-color: darken(#ff4d4d, 10%);
+    }
+  }
+}
+
+.welcome-message {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: $primary-color;
+}
+
+.error-message {
+  color: $error-color;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+// Instagram-like bottom line separator
+.or-separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid $border-color;
+  }
+
+  &::before {
+    margin-right: 10px;
+  }
+
+  &::after {
+    margin-left: 10px;
+  }
+
+  span {
+    font-size: 0.8rem;
+    color: #999;
+  }
+}
+
+.fetched-post {
+  border: 1px solid #ccc; // Add a light border
+  border-radius: 5px; // Round corners
+  padding: 15px; // Add some padding
+  margin: 10px 0; // Add space between posts
+  background-color: #f9f9f9; // Light background color
+}
+
+.post-title {
+  font-size: 18px; // Increase font size for post title
+  font-weight: bold; // Make title bold
+}
+
+.post-author {
+  font-size: 14px; // Slightly smaller font for author
+  color: #555; // Gray color for author
+  margin-top: 5px; // Add space above author name
+}
+
+.post-stats {
+  margin-top: 10px; // Add space above stats
+  font-size: 12px; // Smaller font size for stats
+  color: #777; // Lighter color for stats
+}
+
+.likes,
+.shares {
+  margin-right: 10px; // Add space between stats
+}
